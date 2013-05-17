@@ -34,7 +34,16 @@ public class ShellSpout implements ISpout {
 	BufferedReader _processout;
 	SpoutOutputCollector _collector;
 	String[] command;
-	
+
+
+    public void activate() {
+
+    }
+
+    public void deactivate() {
+
+    }
+
 	public ShellSpout(ShellComponent component) {
 		this(component.get_execution_command(), component.get_script());
 	}
@@ -122,7 +131,12 @@ public class ShellSpout implements ISpout {
 				} else {
 					
 					Map action = (Map) JSONValue.parse(line);
-					String cmd = (String) action.get("command");
+
+                    String cmd = "";
+
+                    if (action != null) {
+					    cmd = (String) action.get("command");
+                    }
 
 					if (cmd.equals("emit")) {
 						Object id = action.get("id");
