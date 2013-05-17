@@ -39,22 +39,22 @@
 		<dependency>
 			<groupId>storm</groupId>
 			<artifactId>storm</artifactId>
-			<version>0.7.0-rc</version>
+			<version>0.8.2</version>
 		</dependency>
-		<dependency>
-			<groupId>org.twitter4j</groupId>
-			<artifactId>twitter4j-core</artifactId>
-			<version>2.2.5-SNAPSHOT</version>
-		</dependency>
-		<dependency>
-			<groupId>org.twitter4j</groupId>
-			<artifactId>twitter4j-stream</artifactId>
-			<version>2.2.5-SNAPSHOT</version>
-		</dependency>
+    <!-- <dependency>
+      <groupId>org.twitter4j</groupId>
+      <artifactId>twitter4j-core</artifactId>
+      <version>2.2.5-SNAPSHOT</version>
+    </dependency>
+    <dependency>
+      <groupId>org.twitter4j</groupId>
+      <artifactId>twitter4j-stream</artifactId>
+      <version>2.2.5-SNAPSHOT</version>
+    </dependency> -->
 		<dependency>
 			<groupId>org.clojure</groupId>
 			<artifactId>clojure</artifactId>
-			<version>1.2.0</version>
+			<version>1.4.0</version>
 		</dependency>
 		<dependency>
 			<groupId>org.clojure</groupId>
