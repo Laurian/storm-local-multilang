@@ -13,11 +13,8 @@ import java.io.DataOutputStream;
 import java.io.IOException;
 import java.io.InputStreamReader;
 import java.nio.charset.Charset;
-import java.util.ArrayList;
-import java.util.Arrays;
-import java.util.HashMap;
-import java.util.List;
-import java.util.Map;
+import java.util.*;
+
 import org.apache.log4j.Logger;
 import org.json.simple.JSONObject;
 import org.json.simple.JSONValue;
@@ -101,7 +98,7 @@ public class ShellBolt implements IBolt {
 
     public void execute(Tuple input) {
         //just need an id
-        long genId = MessageId.generateId();
+        long genId = MessageId.generateId(new Random(1L));
         _inputs.put(genId, input);
         try {
             JSONObject obj = new JSONObject();
